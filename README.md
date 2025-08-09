@@ -46,7 +46,7 @@ IBM Data Science Professional Certificate (Coursera)
 Google Advanced Data Analytics Certificate
 Tableau Data Visualization Specialist
 📬 Let's Connect!
-📧 Email: priyamehta.ds@gmail.com
+📧 Email: yaduriraghavendra@gmail.com
 💼 LinkedIn
 📂 Portfolio Website
 🐙 GitHub
