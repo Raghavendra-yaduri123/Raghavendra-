@@ -1,13 +1,288 @@
 
 
-# 💻 Tech Stack:
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Raghavendra-&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Raghavendra-&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Raghavendra-&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raghavendra Yaduri | Data Analyst Portfolio</title>
+  <style>
+    :root{
+      --bg:#0f172a;         /* slate-900 */
+      --panel:#0b1227;      /* darker panel */
+      --card:#0b1227;       
+      --muted:#92a0b3;
+      --text:#e6edf6;       
+      --brand:#7c3aed;      /* violet-600 */
+      --brand-2:#22c55e;    /* emerald-500 */
+      --accent:#38bdf8;     /* sky-400 */
+      --ring: rgba(124, 58, 237, .45);
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;scroll-behavior:smooth}
+    body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background: radial-gradient(1200px 800px at 80% -10%, rgba(124,58,237,.15), transparent 60%), radial-gradient(800px 600px at 20% 120%, rgba(34,197,94,.12), transparent 60%), var(--bg); color:var(--text)}
 
----
-[![](https://visitcount.itsvg.in/api?id=Raghavendra-&icon=0&color=0)](https://visitcount.itsvg.in)
+    /* Top Nav */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter: blur(8px);background:rgba(11,18,39,.6);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;gap:18px;padding:14px 18px}
+    .brand{font-weight:700;letter-spacing:.3px}
+    .spacer{flex:1}
+    .nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+    .nav a:hover{color:var(--text)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#9f67ff);color:white;text-decoration:none;font-weight:600;box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.15);box-shadow:none}
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+    /* Header */
+    header{max-width:1100px;margin:36px auto;padding:28px 18px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    @media (max-width:900px){header{grid-template-columns:1fr}}
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);padding:26px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero h1{margin:0 0 8px;font-size:2.2rem}
+    .hero p{margin:6px 0 18px;color:var(--muted)}
+    .badges{display:flex;flex-wrap:wrap;gap:8px}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(124,58,237,.18);color:#d6c6ff;border:1px solid rgba(124,58,237,.35);font-size:.85rem}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    /* Sections */
+    section{max-width:1100px;margin:26px auto;padding:0 18px}
+    h2{font-size:1.4rem;margin:0 0 12px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+
+    .skills{padding:18px}
+    .skills ul{columns:2;padding:0;margin:0}
+    .skills li{list-style:none;margin:6px 0;color:var(--text)}
+
+    .projects .project{padding:16px;display:flex;flex-direction:column;gap:10px}
+    .project h3{margin:0}
+    .tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{font-size:.78rem;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.14);color:var(--muted)}
+    .project .actions{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap}
+
+    .links{padding:18px}
+
+    footer{max-width:1100px;margin:40px auto 60px;padding:0 18px;color:var(--muted)}
+
+    /* Modal */
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:18px}
+    .modal{width:min(960px,100%);max-height:85vh;overflow:auto;background:var(--panel);border:1px solid rgba(255,255,255,.1);border-radius:20px;box-shadow:var(--shadow)}
+    .modal header{display:flex;grid-template-columns:none;align-items:center;gap:10px;margin:0;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .modal header h3{margin:0;font-size:1.1rem}
+    .modal .content{padding:16px}
+    .close{margin-left:auto;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--text);cursor:pointer}
+    iframe{width:100%;height:70vh;border:0;border-radius:14px;background:#0a0f1f}
+
+    /* Utility */
+    .muted{color:var(--muted)}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="brand">Raghavendra Yaduri · <span class="muted">Data Analyst</span></span>
+      <span class="spacer"></span>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#links">Links</a>
+      <a href="#contact">Contact</a>
+      <a class="btn ghost" data-open="resume">View Resume</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header>
+    <div class="hero card">
+      <h1>Hi, I'm Raghavendra 👋</h1>
+      <p>Data Analyst turning raw data into clear, actionable insights using <span class="mono">Python, SQL, Excel, Power BI</span>. I love EDA, building dashboards, and telling stories with data.</p>
+      <div class="badges">
+        <span class="badge">Python · Pandas</span>
+        <span class="badge">SQL · MySQL</span>
+        <span class="badge">Power BI</span>
+        <span class="badge">Excel</span>
+        <span class="badge">EDA · Storytelling</span>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" data-open="resume">Open Resume</a>
+        <a class="btn ghost" href="#projects">See Projects</a>
+      </div>
+    </div>
+    <div class="card" style="padding:20px">
+      <h2 id="about" style="margin-top:0">About Me</h2>
+      <p class="muted">I'm a passionate <strong>Data Analyst</strong> with hands-on experience transforming messy data into clean, decision-ready insights. I enjoy finding patterns, optimizing reports, and collaborating with teams to move KPIs in the right direction.</p>
+    </div>
+  </header>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="card skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Python</strong>: Pandas, NumPy, Matplotlib, Seaborn</li>
+        <li><strong>SQL</strong>: MySQL, PostgreSQL, Joins, Window Functions</li>
+        <li><strong>Visualization</strong>: Power BI, Tableau, Excel Charts</li>
+        <li><strong>Analytics</strong>: Data Cleaning, EDA, A/B basics, KPI design</li>
+        <li><strong>Workflow</strong>: Git/GitHub, Jupyter, Reporting Automation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card project" style="grid-column:span 12;">
+        <h3>Sales Analysis Dashboard</h3>
+        <p class="muted"><strong>Tools:</strong> Power BI, SQL</p>
+        <p>Interactive dashboard to analyze regional sales performance; reduced reporting time by <strong>35%</strong>.</p>
+        <div class="tags">
+          <span class="tag">DAX</span><span class="tag">Aggregations</span><span class="tag">Drill-through</span>
+        </div>
+        <div class="actions">
+          <a class="btn" data-open="p1">View Details</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">Live Dashboard</a>
+        </div>
+      </div>
+
+      <div class="card project" style="grid-column:span 12;">
+        <h3>Customer Churn Prediction</h3>
+        <p class="muted"><strong>Tools:</strong> Python, Pandas, Scikit-learn</p>
+        <p>Supervised ML to predict churn; achieved <strong>82% accuracy</strong> with cross-validation and feature engineering.</p>
+        <div class="tags">
+          <span class="tag">LogReg</span><span class="tag">EDA</span><span class="tag">Confusion Matrix</span>
+        </div>
+        <div class="actions">
+          <a class="btn" data-open="p2">View Details</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+        </div>
+      </div>
+
+      <div class="card project" style="grid-column:span 12;">
+        <h3>E‑commerce Data Insights</h3>
+        <p class="muted"><strong>Tools:</strong> SQL, Excel</p>
+        <p>Analyzed order, customer, and product tables to identify top sellers and retention levers; informed a 20% MoM uplift.</p>
+        <div class="tags">
+          <span class="tag">SQL CTEs</span><span class="tag">Cohorts</span><span class="tag">Pivoting</span>
+        </div>
+        <div class="actions">
+          <a class="btn" data-open="p3">View Details</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">Excel/Report</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINKS -->
+  <section id="links" class="links card">
+    <h2>Resume & Links</h2>
+    <p>
+      <a class="btn" data-open="resume">Open Resume</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/raghavendra-yaduri-35a309277" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/Raghavendra-yaduri123" target="_blank" rel="noopener">GitHub</a>
+    </p>
+    <p class="muted">Tip: upload a file named <code>resume.pdf</code> to this repository so the Resume viewer works instantly.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="card" style="padding:18px">
+      <h2>Contact</h2>
+      <p>📧 <a href="mailto:yaduriraghavendra@email.com">yaduriraghavendra@email.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Raghavendra Yaduri · Built with GitHub Pages</p>
+  </footer>
+
+  <!-- OVERLAYS / MODALS -->
+  <div class="overlay" id="modal-resume" aria-hidden="true" role="dialog" aria-label="Resume Viewer">
+    <div class="modal" role="document">
+      <header>
+        <h3>Resume</h3>
+        <button class="close" data-close>Close</button>
+      </header>
+      <div class="content">
+        <p class="muted">If the PDF doesn't load, ensure you uploaded <code>resume.pdf</code> to this repository.</p>
+        <iframe src="resume.pdf"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="modal-p1" aria-hidden="true" role="dialog" aria-label="Sales Analysis Dashboard">
+    <div class="modal">
+      <header>
+        <h3>Sales Analysis Dashboard · Case Study</h3>
+        <button class="close" data-close>Close</button>
+      </header>
+      <div class="content">
+        <p><strong>Problem:</strong> Leadership needed a single source of truth for regional performance and product mix.</p>
+        <p><strong>Approach:</strong> Modeled star schema, wrote SQL for fact tables, built Power BI with DAX measures (YoY, rolling 90-day revenue, contribution margin).</p>
+        <p><strong>Impact:</strong> Cut weekly reporting time by <strong>35%</strong>; improved promo allocation by identifying 3 underperforming SKUs.</p>
+        <p class="muted">Assets:</p>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener">Live Power BI link</a> (or screenshots)</li>
+          <li><a href="#" target="_blank" rel="noopener">SQL queries</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="modal-p2" aria-hidden="true" role="dialog" aria-label="Customer Churn Prediction">
+    <div class="modal">
+      <header>
+        <h3>Customer Churn Prediction · Case Study</h3>
+        <button class="close" data-close>Close</button>
+      </header>
+      <div class="content">
+        <p><strong>Goal:</strong> Predict churn for a telecom dataset and surface top drivers.</p>
+        <p><strong>Stack:</strong> Python, Pandas, scikit-learn, imbalanced-learn.</p>
+        <p><strong>Method:</strong> EDA → feature engineering (tenure bins, contract type dummies) → Logistic Regression with class weights; evaluated with ROC-AUC, F1.</p>
+        <p><strong>Result:</strong> 0.82 F1 on validation; 5 key drivers identified for retention playbooks.</p>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener">GitHub Notebook</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Report PDF</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="modal-p3" aria-hidden="true" role="dialog" aria-label="E-commerce Data Insights">
+    <div class="modal">
+      <header>
+        <h3>E‑commerce Data Insights · Case Study</h3>
+        <button class="close" data-close>Close</button>
+      </header>
+      <div class="content">
+        <p><strong>Questions:</strong> What drives repeat purchases? Which SKUs lead revenue? How do cohorts retain?</p>
+        <p><strong>SQL:</strong> CTEs for cohorting, window functions for RFM; exported to Excel for stakeholder-friendly pivots.</p>
+        <p><strong>Outcome:</strong> Suggested free shipping threshold and cross-sell bundles → inferred 20% MoM uplift.</p>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener">SQL file</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Excel dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const byId = id => document.getElementById(id);
+    const overlays = {
+      resume: byId('modal-resume'),
+      p1: byId('modal-p1'),
+      p2: byId('modal-p2'),
+      p3: byId('modal-p3')
+    };
+    function openModal(key){ const el = overlays[key]; if(!el) return; el.style.display='flex'; el.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+    function closeModal(){ document.querySelectorAll('.overlay').forEach(el=>{el.style.display='none'; el.setAttribute('aria-hidden','true');}); document.body.style.overflow='auto'; }
+    document.addEventListener('click', (e)=>{
+      const openKey = e.target.closest('[data-open]')?.getAttribute('data-open');
+      if(openKey){ e.preventDefault(); openModal(openKey); }
+      if(e.target.matches('[data-close]') || e.target.classList.contains('overlay')){ closeModal(); }
+    });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+  </script>
+</body>
+</html>
